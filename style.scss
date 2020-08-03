@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// tu jest mocno namieszane haha
+
+$primary-color:#7F7AFD;
+$secondary-color:#F1F3FA;
+$warning-color:#FBAA70;
+$danger-color:#FB7070;
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    font-family: 'Nunito',
+        sans-serif;
+    color: #070B1B;
+}
+
+.banner {
+    max-width: 692px;
+    background-color: #F1F3FA;
+    box-shadow: -18px -15px 30px #FFFFFF,
+        18px 18px 30px rgba(81, 87, 126, 0.15);
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 40px;
+}
+
+.banner .element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 23px 34px 17px;
+    color: #404761;
+    transition: color .2s, box-shadow .2s;
+
+    &:hover {
+        box-shadow: -10px -10px 20px #FFFFFF,
+            10px 10px 20px rgba(81, 87, 126, 0.15);
+        color: #070B1B;
+    }
+
+    &__circle-icon {
+        height: 85px;
+        width: 85px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        font-size: 2rem;
+        margin-bottom: 21px;
+        transition: box-shadow .2s;
+
+        &--primary {
+            background-color: $primary-color;
+        }
+
+
+        &--warning {
+            background-color: $warning-color;
+        }
+
+
+        &--danger {
+            background-color: $danger-color;
+        }
+
+    }
+
+    &:hover .element__circle-icon {
+        box-shadow: 0px 12px 20px -7px rgba(81, 87, 126, 0.15);
+
+    }
+
+    &__title {
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+
+.paragraph {
+    max-width: 692px;
+    background: #E5E8F2;
+    box-shadow: inset -5px -5px 15px #FFFFFF,
+        inset 5px 5px 15px rgba(81, 87, 126, 0.15);
+    border-radius: 15px;
+    padding: 30px 125px;
+    margin: 40px;
+
+
+    &__text {
+        text-align: center;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    &__link {
+        color: #2B50DE;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.buttons-box {
+    max-width: 692px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    box-shadow: -5px -5px 10px #FFFFFF,
+        -10px -10px 20px #FFFFFF,
+        10px 10px 20px rgba(50, 65, 153, 0.15);
+    border-radius: 37.5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 22px 118px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 15px;
+    text-align: center;
+    font-family: inherit;
+    transition: background-color .2s;
+
+    &--primary {
+        background-color: $primary-color;
+        color: $secondary-color;
+        border-color: $primary-color;
+
+        &:hover {
+            background-color: darken($color: $primary-color, $amount: 3);
+        }
+    }
+
+
+    &--secondary {
+        background-color: $secondary-color;
+        color: $primary-color;
+        border-color: $secondary-color;
+
+        &:hover {
+            background-color: darken($color: $secondary-color, $amount: 1);
+        }
+    }
+}
