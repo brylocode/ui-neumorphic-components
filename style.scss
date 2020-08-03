@@ -129,6 +129,11 @@ body {
     }
 }
 
+@media(max-width: 462px) {
+    .paragraph {
+        padding: 30px 60px;
+    }
+}
 
 .buttons-box {
     max-width: 692px;
